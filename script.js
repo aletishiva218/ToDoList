@@ -133,11 +133,11 @@ done_all.onclick = () => {
 }
 let currentdate=()=>{
     let date=new Date();
-    return `${date.getDate()<10?`0${date.getDate()}`:date.getDate()}/${date.getMonth()<10?`0${date.getMonth()}`:date.getMonth()}/${date.getFullYear()}`;
+    return `${date.getDate()<10?`0${date.getDate()}`:date.getDate()}/${(date.getMonth()+1)<10?`0${date.getMonth()+1}`:date.getMonth()}/${date.getFullYear()}`;
 }
 let currenttime=()=>{
     let date=new Date();
-    return `${date.getHours()<10?`0${date.getHours()}`:date.getHours()}/${date.getMinutes()<10?`0${date.getMinutes()}`:date.getMinutes()}/${date.getSeconds()<10?`0${date.getSeconds()}`:date.getSeconds()}`;
+    return `${date.getHours()<10?`0${date.getHours()}`:date.getHours()}:${date.getMinutes()<10?`0${date.getMinutes()}`:date.getMinutes()}:${date.getSeconds()<10?`0${date.getSeconds()}`:date.getSeconds()}`;
 }
 let display_empty=()=>{
     let table_data=document.querySelector(".table-data");
